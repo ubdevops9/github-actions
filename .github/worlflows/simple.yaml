@@ -1,4 +1,4 @@
-name: Shell commands s
+name: Shell commands
 
 on: [push]
 
