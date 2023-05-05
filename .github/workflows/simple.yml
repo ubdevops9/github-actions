@@ -14,5 +14,5 @@ jobs:
           npm -v
       - name: python commands
         run: |
-          print("hello world hi g")
+          print("hello world")
         shell: python
