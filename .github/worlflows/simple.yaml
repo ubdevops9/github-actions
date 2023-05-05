@@ -12,3 +12,7 @@ jobs:
         run: |
           node -v
           npm -v
+      - name: python commands
+        run: |
+          print("hello world")
+        shell: python    # we need to inform GitHub actions that this scripts runs on python shell not bash
