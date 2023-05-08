@@ -1,0 +1,14 @@
+name: first workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  firstjob:
+    runs-on: self-hosted
+    steps:
+      - name: firstjob script
+        shell: cmd
+        run: echo "hello world: this is first job"
+  # secondjob:
+
