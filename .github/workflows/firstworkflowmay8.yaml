@@ -9,6 +9,8 @@ jobs:
     steps:
       - name: firstjob script
         shell: cmd
-        run: echo "hello world: this is first job"
+        run: |
+
+          echo "hi"
   # secondjob:
 
