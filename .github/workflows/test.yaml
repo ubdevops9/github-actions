@@ -1,0 +1,36 @@
+name: test workflow dispatch
+
+on:
+  workflow_dispatch
+
+# jobs:
+#   firstjob:
+#     runs-on: self-hosted
+#     steps:
+#       - name: firstjob script
+#         shell: bash
+#         run: |
+
+#           echo "hi"
+  # secondjob:
+
+jobs:
+  firstjob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: firstjob script
+        shell: bash
+        run: |
+
+          echo "hi"
+      - name: first-action
+        # shell: bash
+        uses: actions/checkout@v3
+      - name: greetings
+        id: greetings
+        uses: actions/hello-world-javascript-action@main
+        with:
+          who-to-greet: 'Mona the Octocat'
+      - name: time
+        run: |
+          echo "The time of the greeting was at: ${{ steps.greetings.outputs.time }}"
