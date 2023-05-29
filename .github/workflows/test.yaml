@@ -18,19 +18,19 @@ jobs:
   firstjob:
     runs-on: ubuntu-latest
     steps:
-      - name: firstjob script
+      - name: first-job
         shell: bash
         run: |
 
           echo "hi"
-      - name: first-action
+      - name: first-actions
         # shell: bash
         uses: actions/checkout@v3
-      - name: greetings
+      - name: greetingss
         id: greetings
         uses: actions/hello-world-javascript-action@main
         with:
           who-to-greet: 'Mona the Octocat'
-      - name: time
+      - name: times
         run: |
           echo "The time of the greeting was at: ${{ steps.greetings.outputs.time }}"
