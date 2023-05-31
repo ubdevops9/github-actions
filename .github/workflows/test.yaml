@@ -1,0 +1,28 @@
+name: test for manual
+
+on:
+  pull_request:
+    types:
+      - synchronize
+      - reopened
+      - opened
+    branches:
+      - main
+    paths-ignore:
+      - 'CHANGELOG.md'
+      - 'README.md'
+      - 'SECURITY.md'
+      - 'docker/docs/**'
+      - 'docs/**'
+      - 'utils/check-style/aspell-ignore/**'
+
+jobs:
+  firstjob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: top script
+        shell: bash
+        run: |
+
+          echo "hi"
+

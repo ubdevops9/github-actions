@@ -1,0 +1,13 @@
+name: umang
+
+on:
+#   - push
+  - workflow_dispatch
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+  
+    steps:
+      - name: sya something
+        run: echo "hi"
